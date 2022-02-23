@@ -127,27 +127,31 @@
 
 // }
 
+let lowerCharacters = 'abcdefghijklmnopqrstuvwxyz';
+let upperCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+let specialCharacters = '!@#$%^&*()';
+let numCharacters = '0123456789';
+
 let characters = '';
 
 let addLower = function(){
-    characters.concat('abcdefghijklmnopqrstuvwxyz');
+    characters=characters.concat(lowerCharacters);
 };
 
 let addUpper = function(){
-    characters.concat('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+    characters=characters.concat(upperCharacters);
 };
 
 let addSpecial = function(){
-    characters.concat('!@#$%^&*()');
+    characters=characters.concat(specialCharacters);
 };
 
 let addNum = function(){
-    characters.concat('0123456789');
+    characters=characters.concat(numCharacters);
 };
 
-addNum;
 
-console.log(characters);
+
 
 /*function to generate password*//*
 let makeid = function(length) {
