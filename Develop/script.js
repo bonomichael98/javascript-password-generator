@@ -122,6 +122,8 @@ if (password1.lower == 'yes' || password1.upper == 'yes' ||  password1.numeric =
     console.log(password1);
 }
 
-readinputs(password1.passLen, password1.lower, password1.upper, password1.numeric, password1.special) {
-    
-}
+let randomNumber = function(min, max) {
+    let value = Math.floor(Math.random() * (max - min) + min);
+  
+    return value;
+  };
