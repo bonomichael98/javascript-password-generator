@@ -166,10 +166,10 @@ let startPrompt = function(){
     } 
 
 return password1;
-console.log(password1);
 }
 
-
+startPrompt();
+console.log(password1);
 
 /*function to generate password*/
 
