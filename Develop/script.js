@@ -63,6 +63,15 @@ var obj = new prompt(console.log(len))
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+let makeid = function() {
+    var result           = '';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * 
+        charactersLength));
+    }
+    return result;
+}
 
 
 let startPrompt = function(){
@@ -157,22 +166,9 @@ let startPrompt = function(){
     } 
 
 return password1;
-
+console.log(password1);
 }
 
-let passlength = password1.passLen;
-
-let makeid = function(length) {
-    var result           = '';
-    var charactersLength = characters.length;
-    for ( var i = 0; i < length; i++ ) {
-        result += characters.charAt(Math.floor(Math.random() * 
-        charactersLength));
-    }
-    return result;
-}
-
-makeid();
 
 
 /*function to generate password*/
