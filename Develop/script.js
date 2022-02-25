@@ -63,27 +63,30 @@ var obj = new prompt(console.log(len))
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-let makeid = function() {
-    var result           = '';
-    var charactersLength = characters.length;
-    for ( var i = 0; i < length; i++ ) {
+let makeid = function(length) {
+    let result           = '';
+    let charactersLength = characters.length;
+    for ( let i = 0; i < length; i++ ) {
         result += characters.charAt(Math.floor(Math.random() * 
         charactersLength));
     }
     return result;
 }
 
+let password1 = {
+    passLen: '',
+    lower: '',
+    upper: '',
+    numeric: '',
+    special: ''
+    
+}
+
+
 
 let startPrompt = function(){
 
-    let password1 = {
-        passLen: '',
-        lower: '',
-        upper: '',
-        numeric: '',
-        special: ''
-        
-    }
+    
 
     password1.passLen = prompt("How many characters would you like your password to be? (8 - 128 characters)")
     
@@ -163,15 +166,10 @@ let startPrompt = function(){
     
     if (password1.lower == 'yes' || password1.upper == 'yes' ||  password1.numeric == 'yes' ||  password1.special == 'yes') {
         alert("Your password will be generated.")
+        makeid(password1.passLen);
+        console.log(makeid(password1.passLen));
     } 
-
-return password1;
 }
 
-startPrompt();
-console.log(password1);
 
 /*function to generate password*/
-
-
-
