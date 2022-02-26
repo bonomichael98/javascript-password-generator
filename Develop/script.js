@@ -6,7 +6,7 @@ function writePassword() {
     var password = startPrompt();
     var passwordText = document.querySelector("#password");
 
-    passwordText.value = password1;
+    passwordText.value = password;
 
 }
 
