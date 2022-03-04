@@ -5,8 +5,8 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
     var password = startPrompt();
     var passwordText = document.querySelector("#password");
-
     passwordText.value = password;
+    reset();
 
 }
 
@@ -19,7 +19,7 @@ let upperCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let specialCharacters = '!@#$%^&*()';
 let numCharacters = '0123456789';
 
-let characters = ' ';
+let characters = '';
 
 let password1 = {
     passLen: '',
@@ -75,7 +75,7 @@ let startPrompt = function(){
     }
     
     
-    password1.lower = prompt("Would you like lower case characters in your password?")
+    password1.lower = prompt("Would you like lower case characters in your password? (yes/no)")
     
     if (password1.lower === 'yes') {
         alert("Lower case letters will be included in your password.")
@@ -86,7 +86,7 @@ let startPrompt = function(){
     }
     
     
-    password1.upper = prompt("Would you like upper case characters in your password?")
+    password1.upper = prompt("Would you like upper case characters in your password? (yes/no)")
     
     if (password1.upper === 'yes') {
         alert("Upper case letters will be included in your password.")
@@ -97,7 +97,7 @@ let startPrompt = function(){
     }
     
     
-    password1.numeric = prompt("Would you like numeric characters in your password?")
+    password1.numeric = prompt("Would you like numeric characters in your password? (yes/no)")
     
     if (password1.numeric === 'yes') {
         alert("Numeric characters will be included in your password.")
@@ -108,7 +108,7 @@ let startPrompt = function(){
     }
     
     
-    password1.special = prompt("Would you like special characters in your password?")
+    password1.special = prompt("Would you like special characters in your password? (yes/no)")
     
     if (password1.special === 'yes') {
         alert("Special characters will be included in your password.")
@@ -121,10 +121,13 @@ let startPrompt = function(){
     if (password1.lower == 'yes' || password1.upper == 'yes' ||  password1.numeric == 'yes' ||  password1.special == 'yes') {
         alert("Your password will be generated.")
     } 
-    console.log(makeid(password1.passLen));
     return makeid(password1.passLen);
 }
 //End of inputs
+
+let reset = function() {
+    characters = '';
+}
 
 
 
